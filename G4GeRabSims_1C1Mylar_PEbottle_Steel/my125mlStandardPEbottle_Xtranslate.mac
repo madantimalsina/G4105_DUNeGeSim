@@ -1,0 +1,69 @@
+# Macro file for 125mlStandardPEbottle
+#
+#
+
+/run/initialize
+/control/verbose 1
+/run/verbose 1
+
+# list the existing physics processes
+/process/list
+
+/gps/pos/type Volume
+/gps/pos/shape Cylinder
+#/gps/pos/centre 0. 0. 2.6 cm
+/gps/pos/centre 2.5 0. 2.6 cm
+/gps/pos/rot1 1 0 0
+#/gps/pos/rot2 0 1 0
+/gps/pos/rot2 0 0 1
+/gps/pos/radius 2.4 cm
+#/gps/pos/inner_radius 0. cm
+/gps/pos/halfz 3.455 cm
+
+/gps/particle gamma
+/gps/ang/type iso
+
+/gps/ene/mono 46.539 keV 
+#Pb-210
+#/gps/ene/mono 131.30 keV 
+#Pa-234 18% intensity line
+#/gps/ene/mono 186.211 keV 
+#Ra-226
+#/gps/ene/mono 238.632 keV
+#Pb-212	
+#/gps/ene/mono 240.986 keV 
+#Ra-224
+#/gps/ene/mono 277.351 keV 
+#Tl-208
+#/gps/ene/mono 338.320 keV 
+#Ac-228
+#/gps/ene/mono 351.932 keV 
+#Pb-214
+#/gps/ene/mono 583.191 keV 
+#Tl-208
+#/gps/ene/mono 609.312 keV 
+#Bi-214
+#/gps/ene/mono 727.330 keV 
+#Bi-212	
+#/gps/ene/mono 881.826 keV 
+#Pa-234
+#/gps/ene/mono 911.204 keV 
+#Ac-228
+#/gps/ene/mono 946.183 keV 
+#Pa-234
+#/gps/ene/mono 1173.237 keV
+#Co-60
+#/gps/ene/mono 1332.501 keV 
+#Co-60
+#/gps/ene/mono 1460.830 keV 
+#K-40
+#/gps/ene/mono 2614.533 keV 
+#Tl-208
+
+
+
+/analysis/setFileName GeRabbit_125mlPEbottle_131keV_100kEvt_shiftedFor2parallelBottles_SiO2_46p539keV
+
+
+/run/printProgress 10000
+/run/beamOn 100000
